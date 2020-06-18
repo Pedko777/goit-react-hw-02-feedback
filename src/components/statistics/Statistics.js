@@ -1,14 +1,16 @@
 import React from 'react';
 import Section from '../section/Section';
 
-const Statistics = () => (
+const Statistics = ({state:{good, neutral, bad}}) => (
   <Section name="Statistics">
-    <p>Good:{this.state.good}</p>
-    <p>Neutral:{this.state.neutral}</p>
-    <p>Bad:{this.state.bad}</p>
-    <p>Total:{}</p>
-    <p>Positive feedback:{}</p>
-  </Section>
+<div className={statistic}>
+<h2>Statistics</h2>
+<span>Good: {good}</span>
+<span>Neutral: {neutral}</span>
+<span>Bad: {bad}</span>
+<span>Total: {total}</span>
+<span>Positive feedback: {percentPositiveFeedback(good, total)}%</span>
+ </Section>
 );
 
-export default Statistics;
+ export default Statistics;

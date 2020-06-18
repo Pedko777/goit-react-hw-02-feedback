@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Section = ({name, children}) => (
-    <div>
-        <h2>{name}</h2>
-        {children}
-    </div>
-)
+const Section = ({ name, children }) => (
+  <section>
+    <h2>{name}</h2>
+    {children}
+  </section>
+);
 
 export default Section;

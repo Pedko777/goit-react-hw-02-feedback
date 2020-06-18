@@ -1,18 +1,15 @@
 import React from 'react';
-import Button from '../button/Button';
+import Section from '../section/Section';
 
-const FeedbackOptions = ({ buttonsName }) => {
-  return (
-    <div className="feedbackBtn">
-      {buttonsName.map(name => (
-        <Button key={name} name={name}/>
-      ))}
-    </div>
-  );
-};
+const FeedbackOptions = () =(
+    <Section name="Please leave feedback">
+          <button onClick={() => this.stateIncrement('good')}>Good</button>
+          <button onClick={() => this.stateIncrement('neutral')}>
+            Neutral
+          </button>
+          <button onClick={() => this.stateIncrement('bad')}>Bad</button>
+    </Section>
+)
 
-FeedbackOptions.defaultProps = {
-  buttonsName: [],
-};
 
 export default FeedbackOptions;

@@ -1,29 +1,12 @@
-import React, { Component } from 'react';
-import Statistics from './components/statistics/Statistics';
-import Feedback from './components/feedback/Feedback';
+import React, { Component } from "react";
+// import sytles from "./Feedback.module.css";
+import Feedback from "./components/feedback/Feedback";
 
-const buttonsName = ['good', 'neutral', 'bad'];
-
-class App extends Component {
-  state = {
-    good: 0,
-    neutral: 0,
-    bad: 0,
-  };
-  
-  
-  stateIncrement =() => this.setState((prev) => ({res: prev.res +1}));
-  
-  onVote = () => {};
-
-  render() {
-    return (
-      <div className="container">
-        <Feedback buttonsName={buttonsName} />
-        <Statistics/>
-      </div>
-    );
-  }
-}
+// const {} = sytles;
+ const App = () => (
+  <div>
+    <Feedback />
+  </div>
+);
 
 export default App;
